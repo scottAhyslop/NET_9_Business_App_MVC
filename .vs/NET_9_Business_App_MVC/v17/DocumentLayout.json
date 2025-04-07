@@ -3,36 +3,20 @@
   "WorkspaceRootPath": "F:\\NET_9_Sample\\NET_9_Business_App_MVC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{350DDC64-70BE-4EF3-ACEF-C79128922E6B}|NET_9_Business_App_MVC.csproj|f:\\net_9_sample\\net_9_business_app_mvc\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{350DDC64-70BE-4EF3-ACEF-C79128922E6B}|NET_9_Business_App_MVC.csproj|solutionrelative:models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{350DDC64-70BE-4EF3-ACEF-C79128922E6B}|NET_9_Business_App_MVC.csproj|f:\\net_9_sample\\net_9_business_app_mvc\\controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{350DDC64-70BE-4EF3-ACEF-C79128922E6B}|NET_9_Business_App_MVC.csproj|solutionrelative:controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{350DDC64-70BE-4EF3-ACEF-C79128922E6B}|NET_9_Business_App_MVC.csproj|f:\\net_9_sample\\net_9_business_app_mvc\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{350DDC64-70BE-4EF3-ACEF-C79128922E6B}|NET_9_Business_App_MVC.csproj|solutionrelative:models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{350DDC64-70BE-4EF3-ACEF-C79128922E6B}|NET_9_Business_App_MVC.csproj|f:\\net_9_sample\\net_9_business_app_mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{350DDC64-70BE-4EF3-ACEF-C79128922E6B}|NET_9_Business_App_MVC.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{350DDC64-70BE-4EF3-ACEF-C79128922E6B}|NET_9_Business_App_MVC.csproj|f:\\net_9_sample\\net_9_business_app_mvc\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{350DDC64-70BE-4EF3-ACEF-C79128922E6B}|NET_9_Business_App_MVC.csproj|solutionrelative:models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{350DDC64-70BE-4EF3-ACEF-C79128922E6B}|NET_9_Business_App_MVC.csproj|f:\\net_9_sample\\net_9_business_app_mvc\\controllers\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{350DDC64-70BE-4EF3-ACEF-C79128922E6B}|NET_9_Business_App_MVC.csproj|solutionrelative:controllers\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{350DDC64-70BE-4EF3-ACEF-C79128922E6B}|NET_9_Business_App_MVC.csproj|f:\\net_9_sample\\net_9_business_app_mvc\\models\\inventoryinvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{350DDC64-70BE-4EF3-ACEF-C79128922E6B}|NET_9_Business_App_MVC.csproj|solutionrelative:models\\inventoryinvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{350DDC64-70BE-4EF3-ACEF-C79128922E6B}|NET_9_Business_App_MVC.csproj|f:\\net_9_sample\\net_9_business_app_mvc\\models\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{350DDC64-70BE-4EF3-ACEF-C79128922E6B}|NET_9_Business_App_MVC.csproj|solutionrelative:models\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{350DDC64-70BE-4EF3-ACEF-C79128922E6B}|NET_9_Business_App_MVC.csproj|f:\\net_9_sample\\net_9_business_app_mvc\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{350DDC64-70BE-4EF3-ACEF-C79128922E6B}|NET_9_Business_App_MVC.csproj|solutionrelative:models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{350DDC64-70BE-4EF3-ACEF-C79128922E6B}|NET_9_Business_App_MVC.csproj|f:\\net_9_sample\\net_9_business_app_mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{350DDC64-70BE-4EF3-ACEF-C79128922E6B}|NET_9_Business_App_MVC.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,24 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "F:\\NET_9_Sample\\NET_9_Business_App_MVC\\Models\\Customer.cs",
-              "RelativeDocumentMoniker": "Models\\Customer.cs",
-              "ToolTip": "F:\\NET_9_Sample\\NET_9_Business_App_MVC\\Models\\Customer.cs",
-              "RelativeToolTip": "Models\\Customer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T21:16:21.435Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -67,40 +38,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "InventoryInvoice.cs",
-              "DocumentMoniker": "F:\\NET_9_Sample\\NET_9_Business_App_MVC\\Models\\InventoryInvoice.cs",
-              "RelativeDocumentMoniker": "Models\\InventoryInvoice.cs",
-              "ToolTip": "F:\\NET_9_Sample\\NET_9_Business_App_MVC\\Models\\InventoryInvoice.cs",
-              "RelativeToolTip": "Models\\InventoryInvoice.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T20:43:59.041Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Inventory.cs",
-              "DocumentMoniker": "F:\\NET_9_Sample\\NET_9_Business_App_MVC\\Models\\Inventory.cs",
-              "RelativeDocumentMoniker": "Models\\Inventory.cs",
-              "ToolTip": "F:\\NET_9_Sample\\NET_9_Business_App_MVC\\Models\\Inventory.cs",
-              "RelativeToolTip": "Models\\Inventory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T20:39:09.236Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Department.cs",
               "DocumentMoniker": "F:\\NET_9_Sample\\NET_9_Business_App_MVC\\Models\\Department.cs",
               "RelativeDocumentMoniker": "Models\\Department.cs",
               "ToolTip": "F:\\NET_9_Sample\\NET_9_Business_App_MVC\\Models\\Department.cs",
               "RelativeToolTip": "Models\\Department.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T20:33:47.251Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T20:33:47.251Z"
             },
             {
               "$type": "Document",
@@ -112,43 +58,30 @@
               "RelativeToolTip": "Controllers\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T20:28:19.962Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T20:28:19.962Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Employee.cs",
-              "DocumentMoniker": "F:\\NET_9_Sample\\NET_9_Business_App_MVC\\Models\\Employee.cs",
-              "RelativeDocumentMoniker": "Models\\Employee.cs",
-              "ToolTip": "F:\\NET_9_Sample\\NET_9_Business_App_MVC\\Models\\Employee.cs",
-              "RelativeToolTip": "Models\\Employee.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T20:23:28.371Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "DepartmentsController.cs",
               "DocumentMoniker": "F:\\NET_9_Sample\\NET_9_Business_App_MVC\\Controllers\\DepartmentsController.cs",
               "RelativeDocumentMoniker": "Controllers\\DepartmentsController.cs",
               "ToolTip": "F:\\NET_9_Sample\\NET_9_Business_App_MVC\\Controllers\\DepartmentsController.cs",
               "RelativeToolTip": "Controllers\\DepartmentsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-07T20:15:40.428Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "F:\\NET_9_Sample\\NET_9_Business_App_MVC\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "F:\\NET_9_Sample\\NET_9_Business_App_MVC\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-07T20:03:23.015Z"
             }
