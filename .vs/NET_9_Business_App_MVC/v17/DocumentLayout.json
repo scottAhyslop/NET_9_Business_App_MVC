@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{350DDC64-70BE-4EF3-ACEF-C79128922E6B}|NET_9_Business_App_MVC.csproj|solutionrelative:controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{350DDC64-70BE-4EF3-ACEF-C79128922E6B}|NET_9_Business_App_MVC.csproj|f:\\net_9_sample\\net_9_business_app_mvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{350DDC64-70BE-4EF3-ACEF-C79128922E6B}|NET_9_Business_App_MVC.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{350DDC64-70BE-4EF3-ACEF-C79128922E6B}|NET_9_Business_App_MVC.csproj|f:\\net_9_sample\\net_9_business_app_mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{350DDC64-70BE-4EF3-ACEF-C79128922E6B}|NET_9_Business_App_MVC.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -26,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +42,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "F:\\NET_9_Sample\\NET_9_Business_App_MVC\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "F:\\NET_9_Sample\\NET_9_Business_App_MVC\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T22:44:56.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Department.cs",
               "DocumentMoniker": "F:\\NET_9_Sample\\NET_9_Business_App_MVC\\Models\\Department.cs",
               "RelativeDocumentMoniker": "Models\\Department.cs",
@@ -50,7 +67,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "F:\\NET_9_Sample\\NET_9_Business_App_MVC\\Controllers\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Controllers\\ApplicationDbContext.cs",
@@ -68,22 +85,23 @@
               "RelativeDocumentMoniker": "Controllers\\DepartmentsController.cs",
               "ToolTip": "F:\\NET_9_Sample\\NET_9_Business_App_MVC\\Controllers\\DepartmentsController.cs",
               "RelativeToolTip": "Controllers\\DepartmentsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-07T20:15:40.428Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "F:\\NET_9_Sample\\NET_9_Business_App_MVC\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "F:\\NET_9_Sample\\NET_9_Business_App_MVC\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T20:03:23.015Z"
+              "WhenOpened": "2025-04-07T20:03:23.015Z",
+              "EditorCaption": ""
             }
           ]
         }

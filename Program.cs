@@ -17,7 +17,13 @@ app.UseRouting();
 #pragma warning disable ASP0014 // Suggest using top level route registrations
 app.UseEndpoints(endpoints =>
 {
-    endpoints.MapControllers();
+// Map the default route for MVC, which is the controller and action name
+    endpoints.MapControllers();//map attribute routes to controllers
+                           
+    endpoints.MapControllerRoute( // Map the default route for MVC, which is the controller and action name
+            name: "default",
+            pattern: "{controller=Home}/{action=Index}/{id?}"//default route for MVC
+        );
 });
 #pragma warning restore ASP0014 // Suggest using top level route registrations
 
