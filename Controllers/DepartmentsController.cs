@@ -33,7 +33,7 @@ namespace NET_9_Business_App_MVC.Controllers
         [Route("/departments/{id}")]
         public object Details([FromHeader] int departmentId)
         {
-            //nonfunctional bit to get the actual department object from the id
+            //Match object in collection to the departmentID param
             var department = departments.FirstOrDefault(dept => dept.DepartmentId == departmentId);
             if (department is null)
             {
@@ -78,10 +78,9 @@ namespace NET_9_Business_App_MVC.Controllers
             else if (department is not null)
             {
                 return department;
-            }
-            
+            }          
 
-            return $"This is the updated Department:\n {department.DepartmentName}\nDescription:{department.DepartmentDescription}";
+            return "Department was nuller than null";
             
             /* var department = departments.FirstOrDefault(dept => dept.DepartmentId == departmentId);
             if (department is null)
@@ -94,25 +93,25 @@ namespace NET_9_Business_App_MVC.Controllers
             }
             return "Department was nuller than null";*/
 
-        }//End Edit working
+        }//End Edit //working
 
         //Delete page for the DepartmentsController
         [HttpPost]
-        public string Delete(int? departmentId)
+        [Route("/departments/{id}")]
+        public bool Delete([FromHeader]int? departmentId)
         {
-            if (departmentId is null)
+            //Match object in collection to the departmentID param
+            var department = departments.FirstOrDefault(dept => dept.DepartmentId == departmentId);
+            if (department is null)
             {
-                return "Department is null";
+                return false;
             }
-            else
+            else if (department is not null)
             {
-                return $"You have deleted Department {departmentId} ";
+                departments.Remove(department);
+                return true;
             }
-            
-
-
-
-        }
+            return false;        }
     }//end DepartmentsController         
 }//end namespace
 
