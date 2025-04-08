@@ -30,7 +30,7 @@ namespace NET_9_Business_App_MVC.Controllers
 
         //Details page for the DepartmentsController
         [HttpGet]
-        [Route("/departments/{id}")]
+        [Route("/departments/{departmentId?}")]
         public object Details([FromHeader] int departmentId)
         {
             //Match object in collection to the departmentID param
@@ -64,7 +64,7 @@ namespace NET_9_Business_App_MVC.Controllers
                 
                 return department;
             }
-            return "Department is null";
+            return "Department is nuller than null";
 
         }//End Create  //Working
 
@@ -97,21 +97,28 @@ namespace NET_9_Business_App_MVC.Controllers
 
         //Delete page for the DepartmentsController
         [HttpPost]
-        [Route("/departments/{id}")]
-        public bool Delete([FromHeader]int? departmentId)
+        [Route("/departments/Delete/{departmentid?}")]
+        public string Delete([FromHeader] int departmentId)
         {
             //Match object in collection to the departmentID param
-            var department = departments.FirstOrDefault(dept => dept.DepartmentId == departmentId);
-            if (department is null)
+            /* var department = departments.FirstOrDefault(dept => dept.DepartmentId == departmentId);
+             if (department is null)
+             {
+                 return false;
+             }
+             else if (department is not null)
+             {
+                 departments.Remove(department);
+                 return true;
+             }
+             return false;*/
+            if (departmentId != 0)
             {
-                return false;
+                return $"Department: {departmentId} deleted...";
             }
-            else if (department is not null)
-            {
-                departments.Remove(department);
-                return true;
-            }
-            return false;        }
+            return "Nuller than null";
+
+        }//end delete
     }//end DepartmentsController         
 }//end namespace
 
