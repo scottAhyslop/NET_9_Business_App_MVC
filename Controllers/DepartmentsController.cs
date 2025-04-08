@@ -14,6 +14,7 @@ namespace NET_9_Business_App_MVC.Controllers
         new Department(3,"Basses", "Ottawa St.", "Selling amps, basses, and effects pedals", 75000),
         new Department(4,"Percussion", "Ottawa St.", "Selling drums, bongos, and cymbals", 850000),
         };
+        
 
         //default landing for the DepartmentsController
         public string Index()//home View for the DepartmentsController
@@ -29,9 +30,22 @@ namespace NET_9_Business_App_MVC.Controllers
 
         //Details page for the DepartmentsController
         [HttpGet]
-        public string Details([FromHeader]int? departmentId)
+        [Route("/departments/{id}")  ]
+        public string Details([FromHeader] int departmentId)
         {
-            return $"This is Department {departmentId}";
+            //nonfunctional bit to get the actual department object from the id
+           /* var department = departments.FirstOrDefault(dept => dept.DepartmentId == departmentId);
+            if (department is null)
+            {
+                return "Department is very null";
+            }
+            else if (department is not null)
+            {
+                return department;
+            }
+            return "Department was nuller than null";*/
+
+            return $"Department {departmentId} has returned";
         }
 
         //Create page for the DepartmentsController
@@ -53,16 +67,10 @@ namespace NET_9_Business_App_MVC.Controllers
             }
             return "Department is null";
 
-        }
+        }//End create  //Working
 
-       /* [HttpGet]
-        public Department? Details(int departmentId)
-        {
-            return departments.FirstOrDefault(dept => dept.DepartmentId == departmentId);
-        }*/
-        //Edit page for the DepartmentsController
         [HttpPost]
-        public string Edit(Department department, int? departmentId)
+        public string Edit([FromBody]Department department)
         {
             if (department is null)
             {
@@ -72,7 +80,8 @@ namespace NET_9_Business_App_MVC.Controllers
             {
                 return $"This is the updated Department {department.DepartmentName} with description {department.DepartmentDescription}";
             }
-        }
+            
+        }//working
 
         //Delete page for the DepartmentsController
         [HttpPost]
@@ -84,7 +93,7 @@ namespace NET_9_Business_App_MVC.Controllers
             }
             else
             {
-                return $"Ypui have deleted Department {departmentId} ";
+                return $"You have deleted Department {departmentId} ";
             }
         }
     }//end DepartmentsController         
