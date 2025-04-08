@@ -12,6 +12,32 @@ namespace NET_9_Business_App_MVC.Controllers
         new Employee(4,"Bill", "Ward", "Bongos", "Percussion", 500000),
         };
 
+        private List<Department> departments = new List<Department>
+        {
+        new Department(1,"Amplified Voice","Selling amps, microphones, and mixing boards", "Ottawa St.",  50000),
+        new Department(2,"Amplified Guitars", "Selling amps, guitars, and effects pedals", "Ottawa St.", 150000),
+        new Department(3,"Amplified Basses", "Selling amps, basses, and effects pedals", "Ottawa St.", 75000),
+        new Department(2,"Percussion", "Selling drums, bongos, and cymbals", "Ottawa St.", 850000),
+        };
+
+        public List<Department> GetDepartments() => departments;
+
+        /*//add an employee
+        public void Create(Department department)
+        {
+            if (department is not null)
+            {
+                int maxId = departments.Max(dept => dept.DepartmentId);//get max id from list
+                department.DepartmentId = maxId + 1; //increment id by 1
+                departments.Add(department);
+            }
+        }//end Create
+
+        public Department? Details(int departmentId)
+        {
+            return departments.FirstOrDefault(dept => dept.DepartmentId == departmentId);
+        }*/
+
         //get a list of employees
         public List<Employee> GetEmployees() => employees;
 

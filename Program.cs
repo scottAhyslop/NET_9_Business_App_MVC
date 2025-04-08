@@ -1,8 +1,11 @@
+using NET_9_Business_App_MVC.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddProblemDetails();//adds the problem details middleware to the pipeline
 builder.Services.AddControllersWithViews();
+builder.Services.AddSingleton<Department>();
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())//always place first in middleware pipeline for all to use
@@ -14,6 +17,8 @@ app.UseStatusCodePages();//adds status code pages middleware to the pipeline, al
 
 app.UseRouting();
 
+
+
 #pragma warning disable ASP0014 // Suggest using top level route registrations
 app.UseEndpoints(endpoints =>
 {
@@ -22,8 +27,13 @@ app.UseEndpoints(endpoints =>
                            
     endpoints.MapControllerRoute( // Map the default route for MVC, which is the controller and action name
             name: "default",
-            pattern: "{controller=Home}/{action=Index}/{id?}"//default route for MVC
+            pattern: "{controller=Home}/{action=Index}/{id?}"//default route for MVC            
         );
+    endpoints.MapControllerRoute(
+            name: "departments",
+            pattern: "{controller=Departments}/{id?}"//default route for Departments
+        );
+
 });
 #pragma warning restore ASP0014 // Suggest using top level route registrations
 
