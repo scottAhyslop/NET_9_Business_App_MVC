@@ -30,11 +30,11 @@ namespace NET_9_Business_App_MVC.Controllers
 
         //Details page for the DepartmentsController
         [HttpGet]
-        [Route("/departments/{id}")  ]
-        public string Details([FromHeader] int departmentId)
+        [Route("/departments/{id}")]
+        public object Details([FromHeader] int departmentId)
         {
             //nonfunctional bit to get the actual department object from the id
-           /* var department = departments.FirstOrDefault(dept => dept.DepartmentId == departmentId);
+            var department = departments.FirstOrDefault(dept => dept.DepartmentId == departmentId);
             if (department is null)
             {
                 return "Department is very null";
@@ -43,10 +43,9 @@ namespace NET_9_Business_App_MVC.Controllers
             {
                 return department;
             }
-            return "Department was nuller than null";*/
-
-            return $"Department {departmentId} has returned";
-        }
+            return "Department was nuller than null";
+           
+        }//End Details   //working
 
         //Create page for the DepartmentsController
         [HttpPost]
@@ -67,21 +66,35 @@ namespace NET_9_Business_App_MVC.Controllers
             }
             return "Department is null";
 
-        }//End create  //Working
+        }//End Create  //Working
 
         [HttpPost]
-        public string Edit([FromBody]Department department)
+        public object Edit([FromBody]Department department)
         {
             if (department is null)
             {
-                return "Department is null";
+                return "Department is very null";
             }
-            else
+            else if (department is not null)
             {
-                return $"This is the updated Department {department.DepartmentName} with description {department.DepartmentDescription}";
+                return department;
             }
             
-        }//working
+
+            return $"This is the updated Department:\n {department.DepartmentName}\nDescription:{department.DepartmentDescription}";
+            
+            /* var department = departments.FirstOrDefault(dept => dept.DepartmentId == departmentId);
+            if (department is null)
+            {
+                return "Department is very null";
+            }
+            else if (department is not null)
+            {
+                return department;
+            }
+            return "Department was nuller than null";*/
+
+        }//End Edit working
 
         //Delete page for the DepartmentsController
         [HttpPost]
@@ -95,6 +108,10 @@ namespace NET_9_Business_App_MVC.Controllers
             {
                 return $"You have deleted Department {departmentId} ";
             }
+            
+
+
+
         }
     }//end DepartmentsController         
 }//end namespace
