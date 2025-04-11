@@ -4,8 +4,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddProblemDetails();//adds the problem details middleware to the pipeline
+builder.Services.AddControllers().AddXmlSerializerFormatters();//adds the controllers to the pipeline with XML capabilities for both JSON and XML formatting
 builder.Services.AddControllersWithViews();
-builder.Services.AddSingleton<Department>();
+
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())//always place first in middleware pipeline for all to use
@@ -17,25 +18,18 @@ app.UseStatusCodePages();//adds status code pages middleware to the pipeline, al
 
 app.UseRouting();
 
+//Map the default route for MVC, which is the controller and action name
 
+app.MapControllers();//map attribute routes to controllers
 
-#pragma warning disable ASP0014 // Suggest using top level route registrations
-app.UseEndpoints(endpoints =>
-{
-// Map the default route for MVC, which is the controller and action name
-    endpoints.MapControllers();//map attribute routes to controllers
-                           
-    endpoints.MapControllerRoute( // Map the default route for MVC, which is the controller and action name
+app.MapControllerRoute( // Map the default route for MVC, which is the controller and action name
             name: "default",
             pattern: "{controller=Home}/{action=Index}/{id?}"//default route for MVC            
         );
-    endpoints.MapControllerRoute(
+app.MapControllerRoute(
             name: "departments",
             pattern: "{controller=Departments}/{action=Index}"//default route for Departments {id?}
         );
-
-});
-#pragma warning restore ASP0014 // Suggest using top level route registrations
 
 app.Run();
 

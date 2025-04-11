@@ -3,7 +3,6 @@ using NET_9_Business_App_MVC.Models;
 
 namespace NET_9_Business_App_MVC.Controllers
 {
-
     public class DepartmentsController : Controller
     {
         //Sample data for testing
@@ -14,7 +13,6 @@ namespace NET_9_Business_App_MVC.Controllers
         new Department(3,"Basses", "Ottawa St.", "Selling amps, basses, and effects pedals", 75000),
         new Department(4,"Percussion", "Ottawa St.", "Selling drums, bongos, and cymbals", 850000),
         };
-
 
         //default landing for the DepartmentsController
         [HttpGet]
@@ -32,7 +30,7 @@ namespace NET_9_Business_App_MVC.Controllers
 
         //Details page for the DepartmentsController
         [HttpGet]
-        [Route("/departments/{departmentId?}")]
+        [Route("/departments/{departmentId}")]
         public object Details([FromHeader] int departmentId)
         {
             //Match object in collection to the departmentID param
@@ -53,6 +51,17 @@ namespace NET_9_Business_App_MVC.Controllers
         [HttpPost]
         public object Create([FromBody] Department department)
         {
+
+            foreach (var value in ModelState.Values)
+            {
+                foreach (var error in value.Errors)
+                {
+                    Console.WriteLine(error.ErrorMessage);
+                    Console.WriteLine(error.Exception);
+                }
+            }
+
+            ModelState.AddModelError("Description", "Description is required...");
             
             if (department is null)
             {
@@ -63,7 +72,7 @@ namespace NET_9_Business_App_MVC.Controllers
                 int maxId = departments.Max(dep => dep.DepartmentId);//get max id from list
                 department.DepartmentId = maxId + 1; //increment id by 1
                 departments.Add(department);
-                
+
                 return department;
             }
             return "Department is nuller than null";
@@ -73,18 +82,8 @@ namespace NET_9_Business_App_MVC.Controllers
         [HttpPost]
         public object Edit([FromBody]Department department)
         {
-            if (department is null)
-            {
-                return "Department is very null";
-            }
-            else if (department is not null)
-            {
-                return department;
-            }          
-
-            return "Department was nuller than null";
             
-            /* var department = departments.FirstOrDefault(dept => dept.DepartmentId == departmentId);
+            var dep = departments.FirstOrDefault(dept => dept.DepartmentId == department.DepartmentId);
             if (department is null)
             {
                 return "Department is very null";
@@ -93,13 +92,13 @@ namespace NET_9_Business_App_MVC.Controllers
             {
                 return department;
             }
-            return "Department was nuller than null";*/
+            return "Department was nuller than null";
 
         }//End Edit //working
 
         //Delete page for the DepartmentsController
         [HttpPost]
-        [Route("/departments/Delete/{departmentid?}")]
+        [Route("/departments/Delete/{departmentid}")]
         public string Delete([FromHeader] int departmentId)
         {
             //Match object in collection to the departmentID param
@@ -124,15 +123,3 @@ namespace NET_9_Business_App_MVC.Controllers
     }//end DepartmentsController         
 }//end namespace
 
-/*
- public int DepartmentId { get; set; }
-        public string DepartmentName { get; set; }
-        public string DepartmentDescription { get; set; }
-        public List<Employee> DepartmentEmployees { get; set; }
-        public double DepartmentAnnualSales { get; set; }
-        public List<InventoryInvoice> DepartmentInvoices { get; set; }
-        public List<Inventory> DepartmentItems{ get; set; }
- 
- 
- 
- */
