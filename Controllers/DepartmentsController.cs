@@ -17,15 +17,19 @@ namespace NET_9_Business_App_MVC.Controllers
         //default landing for the DepartmentsController
         [HttpGet]
         [Route("/departments")]
-        public string Index()//home View for the DepartmentsController
-        {
-            string output = "";
+        public IActionResult Index()//home View for the DepartmentsController
+        {         
+            //display sample data, make it look "pretty"
+            string output = "<style>.results{position: absolute;top: 25%;left: 50%;margin-right: -50%;transform: translate(-50%, -33%)}.center{margin-left:33%;}</style><h2 class='center'>Department Info Page</h2>";
+
+            output += "<h4 class='results'><br/>";
             foreach (var department in departments)
             {
                 //test data
-                output += ($"Department. Id: {department.DepartmentId}\n\tName: {department.DepartmentName} \n\tDescription: {department.DepartmentDescription} \n\tAnnual Sales: {department.DepartmentAnnualSales}\n\tLocation: {department.DepartmentLocation}\n\n");
+                output += ($"<br/>Department. Id: {department.DepartmentId}<br/>Name: {department.DepartmentName} <br/>Description: {department.DepartmentDescription} <br/>Annual Sales: {department.DepartmentAnnualSales}<br/>Location: {department.DepartmentLocation}<br/>");
             }
-            return output;//simple string output for now, error messages (if any) still being returned in *&07 fmt, as specfied
+            output += "</h4><br/>";
+            return Content(output, "text/html");
         }
 
         //Details page for the DepartmentsController
@@ -112,7 +116,7 @@ namespace NET_9_Business_App_MVC.Controllers
                 departments.Remove(department);
                 return $"Department: {departmentId} deleted...";
             }
-            return $"Departmentnot found or bad request";
+            return $"Department not found or bad request";
             /*if (departmentId != 0)
             {
                 return $"Department: {departmentId} deleted...";

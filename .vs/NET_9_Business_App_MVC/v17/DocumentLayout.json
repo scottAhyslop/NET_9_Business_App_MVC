@@ -107,8 +107,7 @@
               "RelativeToolTip": "Models\\Department.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T20:33:47.251Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T20:33:47.251Z"
             },
             {
               "$type": "Document",
@@ -118,7 +117,7 @@
               "RelativeDocumentMoniker": "Controllers\\DepartmentsController.cs",
               "ToolTip": "F:\\NET_9_Sample\\NET_9_Business_App_MVC\\Controllers\\DepartmentsController.cs",
               "RelativeToolTip": "Controllers\\DepartmentsController.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAAAEkAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAABMAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-07T20:15:40.428Z",
               "EditorCaption": ""
@@ -133,8 +132,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T20:03:23.015Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T20:03:23.015Z"
             }
           ]
         }
