@@ -1,14 +1,3 @@
-using NET_9_Business_App_MVC.Models;
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddProblemDetails();//adds the problem details middleware to the pipeline
-builder.Services.AddControllers().AddXmlSerializerFormatters();//adds the controllers to the pipeline with XML capabilities for both JSON and XML formatting
-builder.Services.AddControllersWithViews();
-
-var app = builder.Build();
-
 if (!app.Environment.IsDevelopment())//always place first in middleware pipeline for all to use
 {
     app.UseExceptionHandler();//defaults to RFC 7807 standard as a JSON obj output with ProblemDetails service
@@ -32,4 +21,3 @@ app.MapControllerRoute(// Departments route
         );
 
 app.Run();
-
