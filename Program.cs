@@ -31,7 +31,7 @@ app.UseEndpoints(endpoints =>
         );
     endpoints.MapControllerRoute(
             name: "departments",
-            pattern: "{controller=Departments}/{id?}"//default route for Departments
+            pattern: "{controller=Departments}/{action=Index}"//default route for Departments {id?}
         );
 
 });

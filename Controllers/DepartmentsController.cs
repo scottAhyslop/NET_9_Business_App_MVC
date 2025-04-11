@@ -14,9 +14,11 @@ namespace NET_9_Business_App_MVC.Controllers
         new Department(3,"Basses", "Ottawa St.", "Selling amps, basses, and effects pedals", 75000),
         new Department(4,"Percussion", "Ottawa St.", "Selling drums, bongos, and cymbals", 850000),
         };
-        
+
 
         //default landing for the DepartmentsController
+        [HttpGet]
+        [Route("/departments")]
         public string Index()//home View for the DepartmentsController
         {
             string output = "";
@@ -37,7 +39,7 @@ namespace NET_9_Business_App_MVC.Controllers
             var department = departments.FirstOrDefault(dept => dept.DepartmentId == departmentId);
             if (department is null)
             {
-                return "Department is very null";
+                return "Department is very nully null";
             }
             else if (department is not null)
             {
@@ -101,22 +103,22 @@ namespace NET_9_Business_App_MVC.Controllers
         public string Delete([FromHeader] int departmentId)
         {
             //Match object in collection to the departmentID param
-            /* var department = departments.FirstOrDefault(dept => dept.DepartmentId == departmentId);
-             if (department is null)
-             {
-                 return false;
-             }
-             else if (department is not null)
-             {
-                 departments.Remove(department);
-                 return true;
-             }
-             return false;*/
-            if (departmentId != 0)
+            var department = departments.FirstOrDefault(dept => dept.DepartmentId == departmentId);
+            if (department is null)
+            {
+                return $"Department is null...";
+            }
+            else if (department is not null)
+            {
+                departments.Remove(department);
+                return $"Department: {departmentId} deleted...";
+            }
+            return $"Departmentnot found or bad request";
+            /*if (departmentId != 0)
             {
                 return $"Department: {departmentId} deleted...";
             }
-            return "Nuller than null";
+            return "Nuller than null";*/
 
         }//end delete
     }//end DepartmentsController         
