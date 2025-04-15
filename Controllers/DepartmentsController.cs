@@ -34,21 +34,31 @@ namespace NET_9_Business_App_MVC.Controllers
         } //working IAction
 
         //Details page for the DepartmentsController
-        [HttpGet]
-        [Route("/departments/{departmentId}")]
-        public object Details([FromHeader] int departmentId)
+        public IActionResult Details(int? departmentId)
         {
-            //Match object in collection to the departmentID param
-            var department = departments.FirstOrDefault(dept => dept.DepartmentId == departmentId);
-            if (department is null)
-            {
-                return "Department is very nully null";
-            }
-            else if (department is not null)
-            {
-                return department;
-            }
-            return "Department was nuller than null";
+            //All ways of returning results without instantiating a class
+            
+            //local redirect to an internal link
+            //return LocalRedirect($"/employees/GetEmployeesByDepartment/{departmentId}");
+
+            //for redirect to external links
+            // return new RedirectResult("https://google.ca");
+
+            //redirect to the GetEmployeesById page of the EmployeesController
+            //return new LocalRedirectResult($"/employees/GetEmployeesByDepartment/{departmentId}");
+
+            //Return results to another Controller, without hardcoding params
+            /* return new RedirectToActionResult(
+                 nameof (EmployeesController.GetEmployeesByDepartment),
+                 nameof (EmployeesController).Replace("Controller",""),
+                 new { departmentId = departmentId } ); */
+            return RedirectToAction(
+                 nameof(EmployeesController.GetEmployeesByDepartment),
+                 nameof(EmployeesController).Replace("Controller", ""),
+                 new { departmentId = departmentId });
+
+            //Return Json data
+            //return Json(new Department { DepartmentId=5, DepartmentName="Electrical" });
 
         }//End Details   //working
 
@@ -126,7 +136,8 @@ namespace NET_9_Business_App_MVC.Controllers
 
         }//end delete
 
-        //File download - virtual
+        //File handling routines
+        /*//File download - virtual
         [Route("/download_vf")]//virtual file downloader (@webroot folder)
         public IActionResult ReturnVirtualFile() 
         {
@@ -138,7 +149,6 @@ namespace NET_9_Business_App_MVC.Controllers
         {
             return PhysicalFile(@"c:\Users\dredg\Downloads\somethingSomething.txt", "text/plain");
         }//"C:\Users\dredg\Downloads\somethingSomething.txt"
-
         //File download - Content
         [Route("/download_cf")]//Content file downloader, getting Content from server..,
         public IActionResult ReturnContentFile()
@@ -147,7 +157,20 @@ namespace NET_9_Business_App_MVC.Controllers
 
             return File(bytes, "text/plain");
            
-        }//
+        }//*/
+
     }//end DepartmentsController         
 }//end namespace
 
+//random code bits
+/*//Match object in collection to the departmentID param
+var department = departments.FirstOrDefault(dept => dept.DepartmentId == departmentId);
+if (department is null)
+{
+    return "Department is very nully null";
+}
+else if (department is not null)
+{
+    return department;
+}
+return "Department was nuller than null";*/

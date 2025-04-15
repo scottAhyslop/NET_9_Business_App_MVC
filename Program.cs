@@ -28,8 +28,12 @@ app.MapControllerRoute( // Home route
         );
 app.MapControllerRoute(// Departments route
             name: "departments",
-            pattern: "{controller=Departments}/{action=Index}"//default route for Departments {id?}
+            pattern: "{controller=Departments}/{action=Index}"//default route for Departments 
         );
+/*app.MapControllerRoute(// Departments/Details/{id?} route
+            name: "departments/details",
+            pattern: "{controller=Departments}/{action=Details}/{id:int?}"//default route for Departments {id?}
+        );*/
 
 app.Run();
 

@@ -2,7 +2,7 @@
 
 namespace NET_9_Business_App_MVC.Models
 {
-    public class Department : IDepartment
+    public class Department
     {
         public int DepartmentId { get; set; }
         public string? DepartmentName { get; set; }
