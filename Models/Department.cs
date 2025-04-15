@@ -19,7 +19,7 @@ namespace NET_9_Business_App_MVC.Models
 
         }
 
-        public Department(int departmentId, string departmentName, string departmentLocation, string departmentDescription, double departmentAnnualSales)
+        public Department(int departmentId, string? departmentName, string? departmentLocation, string? departmentDescription, double departmentAnnualSales)
         {
             DepartmentId = departmentId;
             DepartmentName = departmentName;
@@ -29,3 +29,18 @@ namespace NET_9_Business_App_MVC.Models
         }
     }
 }
+/*
+ public Department()
+        {
+            
+        }
+
+        public Department(int id, string name, string? description = "")
+        {
+            this.Id = id;
+            this.Name = name;
+            this.Description = description;
+        }
+ 
+ 
+ */

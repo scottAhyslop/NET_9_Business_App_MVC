@@ -6,15 +6,6 @@ namespace NET_9_Business_App_MVC.Controllers
 {
     public class DepartmentsController : Controller
     {
-        //Sample data for testing
-        private List<Department> departments = new List<Department>
-        {
-        new Department(1,"Amplified Voice",  "Ottawa St.", "Selling amps, microphones, and mixing boards", 50000),
-        new Department(2,"Guitars",  "Ottawa St.", "Selling amps, guitars, and effects pedals", 150000),
-        new Department(3,"Basses", "Ottawa St.", "Selling amps, basses, and effects pedals", 75000),
-        new Department(4,"Percussion", "Ottawa St.", "Selling drums, bongos, and cymbals", 850000),
-        };
-
         //default landing for the DepartmentsController
         [HttpGet]
         [Route("/departments")]
