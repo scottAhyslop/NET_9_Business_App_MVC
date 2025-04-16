@@ -1,11 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NET_9_Business_App_MVC.Models;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace NET_9_Business_App_MVC.Controllers
 {
     public class DepartmentsController : Controller
     {
+        private static List<Department> departments = DepartmentsRepository.GetDepartments();
+
         //default landing for the DepartmentsController
         [HttpGet]
         [Route("/departments")]
